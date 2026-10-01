@@ -2,10 +2,12 @@
   "name": "aprendizado-backend-nodejs",
   "version": "1.0.0",
   "description": "Projeto criado para estudar Backend com Node.js, JavaScript, Express, APIs REST, arquitetura, Sequelize e banco de dados.",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "jest --coverage",
+    "start": "tsx server.ts",
+    "build": "tsc",
+    "dev": "tsx watch server.ts"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,19 @@
   },
   "homepage": "https://github.com/dgZinn999/aprendizado-backend-nodejs#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.6.3",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.14",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
   }
 }
